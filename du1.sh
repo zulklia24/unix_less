@@ -26,6 +26,7 @@ then
 
 else 
 	echo "Chyba"
+	exit 1
 fi
 
 
