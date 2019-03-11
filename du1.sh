@@ -2,7 +2,8 @@
 if [ "$1" = "--typ" ]
 then
 
-	type=$(ls -ld "$2" | cut -c 1)
+	exist=
+	type=$(ls -ld "$2" 2> /dev/null | cut -c 1)
 
 	case $type in 
 		-) echo "soubor"		;;
@@ -12,7 +13,8 @@ then
 		p) echo "fifo"			;;
 		c) echo "znakove zarizeni"	;;
 		s) echo "socket"		;;
-		*) echo "another"		;;
+		*) echo "Chyba" 
+		   exit 1			;;
 	esac	
 	
 
