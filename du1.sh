@@ -21,7 +21,7 @@ then
 elif [ "$1" = "--help" ]
 then
 
-	echo "Pouziti: du1.sh [--typ|--help] [cesta_k_suboru]
+	echo "Pouziti: du1.sh [--typ|--help] [cesta_k_souboru]
   --typ		popis...
   --help	popis..."
 
