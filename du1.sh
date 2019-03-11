@@ -1,8 +1,7 @@
 #!/bin/sh
 if [ "$1" = "--typ" ]
 then
-
-	exist=
+	
 	type=$(ls -ld "$2" 2> /dev/null | cut -c 1)
 
 	case $type in 
