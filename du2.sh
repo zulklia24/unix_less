@@ -14,7 +14,6 @@ case $1 in
 	do
 		num=$(($# - $i + 1))
 		echo "${!num}"
-
 	done;;
 
 	"--subst")
@@ -22,7 +21,6 @@ case $1 in
 	A=$2
 	B=$3
 	shift 3
-
 	echo ${@//$A/$B};;
 
 	"--len")
@@ -32,7 +30,6 @@ case $1 in
 		argument=${!i}
 		echo -n "${#argument} "
 	done
-
 	echo;;
 
 	"--help")
