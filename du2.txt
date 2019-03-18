@@ -1,0 +1,24 @@
+--Prečo posledný shift v tomto prípade (testshift a b c d e) žiadne argumenty nezahodil?
+protoze $# == 2, $@ == "d e" tim padem shell nemel, kam se posouvat
+
+--Čo robí premenná $#
+aktualni pocet argumentu
+
+--A zápis ${#premenna}
+delka argumentu(symboly) 
+
+--A čo ${!premenna}
+hodnota argumentu, ktery ma cislo ulozene v 'promenna'
+
+--A čo výraz ${premenna:-vyraz}
+pokud argument cislo 'premenna' je prazdny, nastavi jeho hodnotu na 'vyraz'
+
+--A ${premenna:cislo} a ${premenna:cislo1:cislo2}
+vypise hodnotu argumneta s cislem 'premenna', zacne z 'cislo1'-teho symbolu radku (pripadne vypise jenom 'cislo2' symbolu)
+
+--Čo robí zápis a)${premenna/vyraz/text} a čo b)${premenna//vyraz/text}?
+a)vzmeni 1. vyskit 'vzraz' za 'text' v argumentu cislo 'premenna'
+b)vzmeni kazdy vyskit 'vzraz' za 'text' v argumentu cislo 'premenna'
+
+--Može hocikde byť ako premenna použítý @, tak ako v f7 a f8? 
+ne, napr v ${!premenna} potrebujeme ciselnou hodnotu a v ${premenna:-vyraz} urcite cislo argumentu
