@@ -8,8 +8,6 @@ case $1 in
 		echo "${!i}"
 	done;;
 
-		
-
 	"--reverse")
 
 	for i in `seq 1 $(($# - 1))`
